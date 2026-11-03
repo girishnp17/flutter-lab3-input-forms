@@ -1,0 +1,22 @@
+{
+  "course": "24CS2016 – Building Applications using Flutter",
+  "regno": "URK23CS5015",
+  "ex_no": "3",
+  "title": "Add Interactivity to App – Input and Forms",
+  "date": "",
+  "github_link": "",
+  "video_link": "",
+  "aim": "Develop a Flutter application that displays a predefined list of products and allows users to search or filter the products using input widgets, providing an interactive user experience.",
+  "description": "Interactivity in Flutter is commonly built on StatefulWidget combined with input widgets such as TextField. A TextEditingController gives programmatic access to whatever the user types, and the onChanged callback fires on every keystroke, letting the UI react immediately by calling setState to rebuild with new data.\n\nThis experiment implements a Product Search screen. A predefined, constant list of 14 products (name, category, price) is held in a model file. The SearchScreen is a StatefulWidget holding a TextEditingController and a _filtered list. Each keystroke in the TextField runs a case-insensitive substring match against both the product name and category and rebuilds the filtered list via setState. A clear ('x') button appears once text is entered, a live counter shows how many of the products currently match, and an explicit 'No products found' message is shown when the filter produces zero results, giving the user clear feedback at every step.",
+  "code_files": [
+    { "path": "code/lib/models/product.dart", "label": "lib/models/product.dart" },
+    { "path": "code/lib/widgets/product_tile.dart", "label": "lib/widgets/product_tile.dart" },
+    { "path": "code/lib/screens/search_screen.dart", "label": "lib/screens/search_screen.dart" },
+    { "path": "code/lib/main.dart", "label": "lib/main.dart" }
+  ],
+  "screenshots": [
+    { "path": "screenshots/01_search_all.png", "caption": "Fig 1. All 14 products shown before any search text is entered." },
+    { "path": "screenshots/02_search_filtered.png", "caption": "Fig 2. After typing 'audio' into the search field, the list live-filters down to the 2 matching products (Wireless Headphones, Bluetooth Speaker)." }
+  ],
+  "result": "The Flutter application was successfully developed to display a predefined list of products and filter them interactively using a TextField input widget. The search correctly narrows the list in real time as the user types, and an empty-state message is shown when no products match, as verified in the screenshots above."
+}
